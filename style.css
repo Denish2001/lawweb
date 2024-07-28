@@ -1,0 +1,544 @@
+* {
+    font-family: "Nunito Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    font-variation-settings: "wdth" 100, "YTLC" 500;
+    box-sizing: border-box;
+}
+html{
+    scroll-behavior: smooth;
+}
+body {
+    margin: 0;
+    background-color: whitesmoke;
+}
+.logo {
+    height: 90px;
+    width: 300px;
+}
+.navbar {
+    background-color: rgb(12, 12, 49);
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    align-items: center;
+    border-bottom-style: solid;
+    border-bottom-color: goldenrod;
+}
+nav {
+    color: white;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    padding-left: 20px;
+    padding-right: 15px;
+    font-size: 12px;
+}
+nav a {
+    text-decoration: none;
+    color: white;
+    padding-top: 40px;
+    padding-bottom: 20px;
+    padding-left: 30px;
+    float: left;
+    display: block;
+}
+.topnav {
+    overflow: hidden;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.info{
+    width: 100%;
+    height: 40px;
+    background-color: whitesmoke;
+    opacity: 0.5;
+    display: flex;
+    justify-content: space-evenly;
+    color: rgb(6, 6, 34);
+    font-weight: bold;
+    flex-wrap: wrap;
+}
+.info p{
+    text-align: center;
+    font-family: "Nunito Sans", sans-serif;
+    padding-bottom: 10px;
+}
+@media screen and (max-width: 600px){
+    .info{
+        height: 180px;
+    }
+    .info p{
+        padding-bottom: 0;
+        padding-top: 0;
+    }
+}
+  
+.topnav .icon {
+    display: none;
+}
+@media screen and (max-width: 600px){
+    .navbar img.logo{
+        display: none;
+    }
+    
+}
+@media screen and (max-width: 600px) {
+    .topnav a {display: none;}
+    .topnav a.icon {
+      float: right;
+      display: block;
+      padding-right: 10px;
+    }
+}
+@media screen and (max-width: 600px) {
+    .topnav.responsive {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+       
+    }
+    .topnav.responsive a.icon {
+      position: absolute;
+      right: 0;
+      top: 0;
+    }
+    .topnav.responsive a {
+      float: none;
+      display: block;
+      text-align: left;
+      margin: 0;
+      padding: 10px 10px;
+    }
+    .topnav.responsive a:hover{
+        background-color: goldenrod;
+        color: whitesmoke;
+    }
+  }
+ @media screen and (max-width: 600px){
+    .topnav.responsive a.appointment{
+        float: none;
+        display: block;
+        text-align: center;
+        background-color: rgb(12, 12, 49);
+        color:goldenrod;
+        padding: 14px;
+        text-decoration: none;
+        font-size: 17px;
+    }
+    .topnav.responsive a.appointment:hover {
+        background-color: rgb(224, 209, 171);
+        color: rgb(12, 12, 49);
+    }
+    
+ }
+  
+  
+  
+.appointment {
+    border-style: solid;
+    float: right;
+    color: goldenrod;
+    border-radius: 10px;
+    padding-top: 30px;
+    padding-bottom: 20px;
+    padding-left: 20px;
+    padding-right: 30px;
+    text-decoration: none;
+    margin-right: 10px;
+    margin-left: 20px;
+    text-align: center;
+}
+.appointment a {
+    padding-top: 5px;
+}
+footer {
+    background-color: rgb(12, 12, 49);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    color: white;
+    align-items: center;
+    border-top-style: solid;
+    border-color: goldenrod;
+    padding-top: 10px;
+}
+footer img {
+    height: 90px;
+    width: 300px;
+    padding-top: 20px;
+}
+footer a {
+    text-decoration: none;
+    color: goldenrod;
+}
+footer a:hover {
+    opacity: 0.5;
+}
+.foot {
+    width: 400px;
+}
+footer h2 {
+    padding-top: 10px;
+}
+/* Style all font awesome icons */
+.fa {
+    padding: 10px;
+    font-size: 20px;
+    width: 40px;
+    text-align: center;
+    text-decoration: none;
+  }
+  
+  /* Add a hover effect if you want */
+  .fa:hover {
+    opacity: 0.7;
+  }
+  
+  /* Set a specific color for each brand */
+  
+  /* Facebook */
+ 
+
+.container {
+    margin: 0 auto;
+    width: 100%;
+    height: 300px;
+    position: relative;
+    overflow: hidden;
+}
+.slides {
+    display: flex;
+    height: 100%;
+}
+.slide {
+    min-width: 110%;
+    position: relative;
+}
+.slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.slide-controls {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.slide-controls img {
+    height: 16px;
+    width: 16px;
+}
+#next-btn,
+#prev-btn {
+    cursor: pointer;
+    font-size: 30px;
+    border: none;
+    padding: 10px;
+}
+#next-btn:focus, 
+#prev-btn:focus {
+    outline: none;
+}
+
+.slide-content {
+    position: absolute;
+    top: 50%;
+    left: 80px;
+    right: 130px;
+    transform: translateY(-50%);
+    font-size: 20px;
+    color: whitesmoke;
+}
+.slido {
+    display: flex;
+    flex-direction: row;
+    font-weight: bold;
+    color: whitesmoke;
+}
+.slido p {
+    padding-right: 30px;
+}
+.redirects {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+.card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    max-width: 300px;
+    min-height: 400px;
+    max-height: 500px;
+    margin: auto;
+    text-align: center;
+    margin-top: 20px;
+    
+}
+.title {
+    font-size: 15px;
+}
+.redirects button {
+    border: none;
+    outline: 0;
+    display: inline-block;
+    padding: 8px;
+    color: white;
+    background-color: rgb(12, 12, 49);
+    text-align: center;
+    cursor: pointer;
+    width: 100%;
+    font-size: 18px;
+    
+}
+.redirects a {
+    text-decoration: none;
+    font-size: 22px;
+    color: black;
+}
+.redirects button:hover, a:hover {
+    opacity: 0.7;
+}
+.redirects iframe {
+    max-width: 300px;
+    max-height: 200px;
+}
+main {
+    background-color: whitesmoke;
+}
+.card1 {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    max-width: 1200px;
+
+    margin: auto;
+    text-align: center;
+    margin-top: 20px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+.body{
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+    align-items: center;
+}
+.accordion{
+    margin-top: 10px;
+    width: 800px;
+    max-width: 1200px;
+}
+.accordion .ContentBX{
+    position: relative;
+    margin: 10px;
+}
+.accordion .ContentBX .label{
+    position: relative;
+    padding: 10px;
+    background:rgb(12, 12, 49);
+    color: white;
+    cursor: pointer;
+}
+.accordion .ContentBX .label::before {
+    content: '+';
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+    font-size: 1.5em;
+    color: goldenrod;
+}
+.accordion .ContentBX .contents{
+    position: relative;
+    background: white;
+    height: 0;
+    overflow: hidden;
+    transition: 0.5s;
+    overflow-y: auto;
+    display: none;
+    transition: max-height 0.2s ease-out;
+    
+}
+
+.accordion .ContentBX.active .contents{
+    display: block;
+    min-height: 200px;
+    padding: 20px;
+}
+.accordion .ContentBX.active .label::before{
+    content: '-';
+} 
+
+.prax{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    
+}
+.prax img{
+    width: 300px;
+    height: 150px;
+    padding-right: 10px;
+}
+@media screen and (max-width: 600px) {
+    .accordion{
+        width: 450px;
+    }
+    .prax img{
+        display: none;
+    }
+}
+.backg{
+    position: relative;
+    text-align: center;
+    color: white;
+    height: 150px;
+    font-size: 30px;
+    font-weight: bold;
+}
+.backg img{
+    height: 150px;
+    object-fit: cover;
+    width: 100%;
+    object-position: 40% 50%;
+}
+.centered{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.card img{
+    max-width:300px;
+    max-height: 200px;
+    width: 300px;
+    height: 200px;
+    object-fit: cover;
+    object-position: 50% 20%;
+}
+.contactcard{
+    box-shadow: 0 4px 8px 0 #00000033;
+    max-width: 1000px;
+    min-height: 150px;
+    max-height: 500px;
+    margin: auto;
+    text-align: center;
+    margin-top: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 5px;
+    padding-right: 5px;
+    margin-bottom: 10px;
+    border-top-style: solid;
+    border-bottom-style: solid;
+    border-top-color: rgb(12, 12, 49);
+    border-bottom-color: goldenrod;
+}
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+  
+  /* Modal Content/Box */
+.modal-content {
+    background-color: #fefefe;
+    margin: 3% auto; /* 15% from the top and centered */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%; /* Could be more or less, depending on screen size */
+}
+  
+  /* The Close Button */
+  .close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+  
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.missviss{
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+.vis{
+    width: 500px;
+    padding-right: 10 px;
+    box-shadow: 0 4px 8px 0 #00000033;
+}
+
+/*Article*/
+.art{
+    width: 70%;
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background-color: whitesmoke;
+    box-shadow: 0 4px 8px 0 #00000033;
+    margin-bottom: 15px;
+    justify-content: center;
+    margin-left: 15%;
+    margin-right: 20%;
+    color: goldenrod;
+
+}
+.art:hover{
+    height:90px ;
+    font-size: 20px;
+}
+@media screen and (max-width: 600px) {
+    .art:hover{
+        height:160px ;
+        font-size: 20px;
+    }
+}
+.word{
+    width: 80%;
+    text-align: start;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    background-color: whitesmoke;
+    box-shadow: 0 4px 8px 0 #00000033;
+    margin-bottom: 15px;
+    justify-content: center;
+    margin-top: 4%;
+    justify-content: center;
+    color: black;
+}
+.artimg{
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
